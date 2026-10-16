@@ -98,7 +98,7 @@ export default function ListInput({
           onChange={(e) => onChange(e.target.value)}
           placeholder={`1. Lionel\n2. Angel\n3. Rodrigo\n4. Lautaro\n...`}
           rows={6}
-          className="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl p-3 text-slate-100 placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent font-mono transition-all resize-y"
+          className="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl p-3 text-slate-100 placeholder-slate-500 text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent font-mono transition-all resize-y"
         />
       </div>
 
@@ -121,7 +121,7 @@ export default function ListInput({
         type="button"
         disabled={playerCount < 2}
         onClick={onArmarEquipos}
-        className={`w-full mt-4 py-3.5 px-4 rounded-xl font-bold text-base shadow-lg transition-all flex items-center justify-center gap-2 active:scale-98 cursor-pointer ${
+        className={`w-full mt-4 py-3.5 px-4 rounded-xl font-bold text-base shadow-lg transition-all flex items-center justify-center gap-2 active:scale-[0.98] cursor-pointer ${
           playerCount >= 2
             ? 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 shadow-emerald-500/20'
             : 'bg-slate-700/50 text-slate-500 cursor-not-allowed shadow-none'

@@ -37,7 +37,7 @@ export default function App() {
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col items-center px-4 pb-12 selection:bg-emerald-500 selection:text-slate-950">
       <Header />
 
-      <main className="w-full max-w-lg space-y-4">
+      <main className="w-full max-w-lg flex flex-col gap-4">
         {!teams ? (
           <ListInput
             rawText={rawText}

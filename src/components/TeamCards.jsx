@@ -60,7 +60,7 @@ export default function TeamCards({
   }
 
   return (
-    <div className="w-full space-y-4">
+    <div className="w-full flex flex-col gap-4">
       {/* Barra de acciones principales (Mobile-First) */}
       <div className="grid grid-cols-2 gap-2">
         <button
@@ -124,7 +124,7 @@ export default function TeamCards({
             </span>
           </div>
 
-          <ol className="space-y-2">
+          <ol className="flex flex-col gap-2">
             {teamA.map((player, index) => (
               <li
                 key={`teamA-${index}-${player}`}
@@ -168,7 +168,7 @@ export default function TeamCards({
             </span>
           </div>
 
-          <ol className="space-y-2">
+          <ol className="flex flex-col gap-2">
             {teamB.map((player, index) => (
               <li
                 key={`teamB-${index}-${player}`}
