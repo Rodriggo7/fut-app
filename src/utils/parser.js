@@ -15,9 +15,9 @@ export function parsePlayerList(rawText) {
     .map((line) => {
       let cleaned = line.trim()
       // Remueve numeraciones del tipo "1.", "1-", "1)", "1: ", "1 "
-      cleaned = cleaned.replace(/^\d+[\.\-\)\:\s]+\s*/, '')
+      cleaned = cleaned.replace(/^\d+[.\-):\s]+\s*/, '')
       // Remueve viñetas comunes como "-", "*", "•", "–", "—", ">"
-      cleaned = cleaned.replace(/^[\-\*\•\–\—\>]\s*/, '')
+      cleaned = cleaned.replace(/^[-*•–—>]\s*/, '')
       return cleaned.trim()
     })
     .filter((line) => line.length > 0)
