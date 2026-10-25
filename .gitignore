@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Planificaciones internas del proyecto (no subir al repo)
+.planificaciones

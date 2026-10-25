@@ -60,7 +60,7 @@ export default function TeamCards({
   }
 
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-4 animate-fade-in-up">
       {/* Barra de acciones principales (Mobile-First) */}
       <div className="grid grid-cols-2 gap-2">
         <button
@@ -98,7 +98,7 @@ export default function TeamCards({
       {/* Tarjetas de Equipos */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Equipo 1 */}
-        <div className="bg-slate-800/90 border-2 border-emerald-500/30 rounded-2xl p-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+        <div className="bg-slate-800/90 border-2 border-emerald-500/30 rounded-2xl p-4 shadow-xl backdrop-blur-sm relative overflow-hidden animate-[fadeInUp_0.5s_ease-out]">
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-teal-400"></div>
           <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-700/60">
             <div className="flex items-center gap-2">
@@ -116,7 +116,7 @@ export default function TeamCards({
                 ) : (
                   <h3 className="font-bold text-slate-100 text-base">{teamAName}</h3>
                 )}
-                <span className="text-xs text-slate-400">Camiseta clara / titular</span>
+                <span className="text-xs text-slate-300">Camiseta clara / titular</span>
               </div>
             </div>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
@@ -124,11 +124,11 @@ export default function TeamCards({
             </span>
           </div>
 
-          <ol className="flex flex-col gap-2">
+          <ol className="flex flex-col gap-2 animate-[fadeInUp_0.3s_ease-out]">
             {teamA.map((player, index) => (
               <li
                 key={`teamA-${index}-${player}`}
-                className="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/60 border border-slate-700/40 text-sm text-slate-200"
+                className="player-item flex items-center justify-between p-2.5 rounded-xl bg-slate-900/60 border border-slate-700/40 text-sm text-slate-200 hover:bg-slate-900/80 transition-colors animate-[fadeInUp_0.3s_ease-out]"
               >
                 <div className="flex items-center gap-2.5">
                   <span className="flex items-center justify-center w-5 h-5 rounded-full bg-slate-800 text-[11px] font-bold text-emerald-400">
@@ -142,7 +142,7 @@ export default function TeamCards({
         </div>
 
         {/* Equipo 2 */}
-        <div className="bg-slate-800/90 border-2 border-cyan-500/30 rounded-2xl p-4 shadow-xl backdrop-blur-sm relative overflow-hidden">
+        <div className="bg-slate-800/90 border-2 border-cyan-500/30 rounded-2xl p-4 shadow-xl backdrop-blur-sm relative overflow-hidden animate-[fadeInUp_0.55s_ease-out]">
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-400"></div>
           <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-700/60">
             <div className="flex items-center gap-2">
@@ -160,7 +160,7 @@ export default function TeamCards({
                 ) : (
                   <h3 className="font-bold text-slate-100 text-base">{teamBName}</h3>
                 )}
-                <span className="text-xs text-slate-400">Pechera / suplente</span>
+                <span className="text-xs text-slate-300">Pechera / suplente</span>
               </div>
             </div>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
@@ -168,11 +168,11 @@ export default function TeamCards({
             </span>
           </div>
 
-          <ol className="flex flex-col gap-2">
+          <ol className="flex flex-col gap-2 animate-[fadeInUp_0.3s_ease-out]">
             {teamB.map((player, index) => (
               <li
                 key={`teamB-${index}-${player}`}
-                className="flex items-center justify-between p-2.5 rounded-xl bg-slate-900/60 border border-slate-700/40 text-sm text-slate-200"
+                className="player-item flex items-center justify-between p-2.5 rounded-xl bg-slate-900/60 border border-slate-700/40 text-sm text-slate-200 hover:bg-slate-900/80 transition-colors animate-[fadeInUp_0.3s_ease-out]"
               >
                 <div className="flex items-center gap-2.5">
                   <span className="flex items-center justify-center w-5 h-5 rounded-full bg-slate-800 text-[11px] font-bold text-cyan-400">

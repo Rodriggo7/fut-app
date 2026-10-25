@@ -40,3 +40,30 @@ button, a, input, textarea {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.4);
 }
+
+/* Animación de entrada al mostrar tarjetas de equipos */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.45s ease-out forwards;
+}
+
+ /* Pequeño delay escalonado para cada jugador */
+.player-item:nth-child(odd) {
+  animation-delay: 0.05s;
+}
+.player-item:nth-child(even) {
+  animation-delay: 0.1s;
+}
+.player-item:nth-child(3n) {
+  animation-delay: 0.15s;
+}
